@@ -1,0 +1,71 @@
+void setup() {
+
+  size(1025,768);
+  
+
+// etrafındaki kareler
+  int b = 200;
+  blackWhiteLine(255,b);
+  b = b+30;
+  blackLine(255,b);
+  b = b+30;
+  blackWhiteLine(255,b);
+  b = b+30;
+  blackLine(255,b);
+  b = b+30;
+  blackWhiteLine(255,b);
+  b = b+30;
+  blackLine(255,b);
+  b = b+30;
+  blackWhiteLine(255,b);
+  b = b+30;
+  blackLine(255,b);
+  b = b+30;
+  blackWhiteLine(255,b);
+  b = b+30;
+  blackLine(255,b);
+  b = b+30;
+  blackWhiteLine(255,b);
+  
+  
+  
+    //mid dikdörtgenler
+  int a = 375;
+  fill(0);
+  rect(a,320,85,25);
+  rect(a,350,85,25);
+  rect(a,380,85,25);
+  a = a+90;
+  rect(a,320,85,25);
+  rect(a,350,85,25);
+  rect(a,380,85,25);
+  a = a+90;
+  rect(a,320,85,25);
+  rect(a,350,85,25);
+  rect(a,380,85,25);
+
+}
+
+void blackLine(int xcor, int ycor) {
+  for (int i = 0; i < 17; i = i+1){
+  fill(0);
+  rect(xcor, ycor, 25, 25);
+  xcor = xcor + 30;
+  }
+  }
+  
+  void blackWhiteLine(int xcor, int ycor) {
+    int x = 0;
+  for (int i = 0; i < 17; i = i+1){
+    if (x == 0){
+  xcor = xcor + 30;
+  x = 1;
+    }
+    else if (x == 1){
+  fill(0);
+  rect(xcor, ycor, 25, 25);
+  xcor = xcor + 30;
+  x = 0;
+      }
+    }
+  }
